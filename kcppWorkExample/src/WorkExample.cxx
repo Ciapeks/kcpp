@@ -12,23 +12,11 @@ int main() {
   cout << "\n-----------------  WorkExampleZero -------------------------------"
        << endl;
 
-  WorkExampleZero *myValue = new WorkExampleZero();
-  myValue->SetValue(15);
-  myValue->Print();
+  WorkExampleZero *myWork = new WorkExampleZero();
+  myWork->SetVariable(100);
 
-  cout << "Value:     " << myValue->GetValue() << endl;
+  cout << "Work no:     " << myWork->GetVariable() << endl;
 
-  cout << "\n------------------ WorkExampleZeroA -------------------------------"
-       << endl;
-
-
-  myValue->WorkExampleA();
-  
-  cout << "\n------------------ WorkExampleZeroB -------------------------------"
-       << endl;
-
-  myValue->WorkExampleB();
-
-  cout << "\n------------------ ZadEnumExample -------------------------------"
-       << endl;
+  myWork->WorkExampleZeroA();
+  myWork->Print();
 }

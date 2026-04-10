@@ -7,9 +7,9 @@
 #include <iostream>
 using namespace std;
 
-void WorkExampleZero::WorkExampleZeroB() {
+void WorkExampleZero::WorkExampleZeroC() {
 
   cout << "---------------------------------------" << endl;
-  cout << "WorkExampleZeroB" << endl;
+  cout << "WorkExampleZeroC" << endl;
   cout << "---------------------------------------" << endl;
 }
