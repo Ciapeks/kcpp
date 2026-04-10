@@ -3,7 +3,6 @@
    date: 2008.02.22
  */
 
-#include "WorkExampleOne.h"
 #include "WorkExampleZero.h"
 #include <iostream>
 using namespace std;
@@ -13,28 +12,23 @@ int main() {
   cout << "\n-----------------  WorkExampleZero -------------------------------"
        << endl;
 
-  WorkExampleZero *myCar = new WorkExampleZero();
-  myCar->SetPlate(100);
-  myCar->SetFakePlate(101);
-  myCar->SetColor(102);
-  myCar->Print();
+  WorkExampleZero *myValue = new WorkExampleZero();
+  myValue->SetValue(15);
+  myValue->Print();
 
-  cout << "Plate No:     " << myCar->GetPlate() << endl;
-  cout << "FakePlate No: " << myCar->GetFakePlate() << endl;
-  cout << "Color No:     " << myCar->GetColor() << endl;
+  cout << "Value:     " << myValue->GetValue() << endl;
 
-  cout << "\n------------------ WorkExampleOne -------------------------------"
+  cout << "\n------------------ WorkExampleZeroA -------------------------------"
        << endl;
 
-  WorkExampleOne *myVan = new WorkExampleOne();
-  myVan->StealPlate();
-  myVan->SetPlate(200);
-  myVan->SetFakePlate(201);
-  myVan->SetColor(202);
 
-  cout << "Plate No:     " << myVan->GetPlate() << endl;
-  cout << "FakePlate No: " << myVan->GetFakePlate() << endl;
-  cout << "Color No:     " << myVan->GetColor() << endl;
+  myValue->WorkExampleA();
+  
+  cout << "\n------------------ WorkExampleZeroB -------------------------------"
+       << endl;
 
-  myCar->WorkExampleA();
+  myValue->WorkExampleB();
+
+  cout << "\n------------------ ZadEnumExample -------------------------------"
+       << endl;
 }

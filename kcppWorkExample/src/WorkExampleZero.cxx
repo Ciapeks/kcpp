@@ -17,10 +17,6 @@ WorkExampleZero::~WorkExampleZero() {
 void WorkExampleZero::Print() {
 
   cout << "---------------------------------------" << endl;
-  cout << "All about me:" << endl;
-  cout << "---------------------------------------" << endl;
-  cout << "Plate No.:     " << fPlate << endl;
-  cout << "FakePlate No.: " << fFakePlate << endl;
-  cout << "Color:         " << fColor << endl;
+  cout << "Value:     " << x << endl;
   cout << "---------------------------------------\n\n" << endl;
 }

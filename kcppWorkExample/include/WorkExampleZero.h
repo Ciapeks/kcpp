@@ -15,27 +15,18 @@ public:
   ~WorkExampleZero();
 
   /** Modifiers **/
-  void SetPlate(int rplate) { fPlate = rplate; };
-  void SetFakePlate(int fplate) { fFakePlate = fplate; };
-  void SetColor(int color) { fColor = color; };
+  void SetValue(int y) { x = y; };
 
   /** Accesors **/
-  int GetPlate() { return fPlate; };
-  int GetFakePlate() { return fFakePlate; };
-  int GetColor() { return fColor; };
-
+  int GetValue() { return x; };
+  
   void Print();
 
-  // The function definition is in a separate file from the standard
-  // function definitions for this class. This function definition
-  // has been moved to a separate file, WorkExampleZeroOne.cxx, instead of
-  // being in the WorkExampleZero.cxx class source file.
   void WorkExampleA();
+  void WorkExampleB();
 
 private:
-  int fPlate;
-  int fFakePlate;
-  int fColor;
+  int x;
 };
 
 #endif
