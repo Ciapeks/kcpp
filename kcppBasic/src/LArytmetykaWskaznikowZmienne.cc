@@ -76,9 +76,9 @@ int main() {
   cout << "Adres zmiennej A: " << &a << "\t dec: " << hextodec(a1) << endl;
 
   //--- lub prosciej ------------------
-  unsigned long p = (unsigned long)&a;
+  // unsigned long p = (unsigned long)&a;
   // long p = (long) &a;
-  cout << "Adres zmiennej A: " << &a << "\t dec: " << p << endl;
+  //cout << "Adres zmiennej A: " << &a << "\t dec: " << p << endl;
   // cout <<"Adres zmiennej A: "<< &a << "\t dec: " << dec << &a << endl;
   // cout << dec << &a << endl;
 
@@ -127,27 +127,27 @@ int main() {
   cout << "3. A, B, C: " << a << "\t" << b << "\t" << c << endl;
 
   wsk_int = &a;
-  *(wsk_int + 1) = 30;
+  *(wsk_int - 1) = 30;
   cout << "4. A, B, C: " << a << "\t" << b << "\t" << c << endl;
 
-  *(&a + 1) = 40;
+  *(&a - 1) = 40;
   cout << "5. A, B, C: " << a << "\t" << b << "\t" << c << endl;
 
   //  wsk_int = &c;
   //*(wsk_int - 1) = 50;
-  *(&c - 1) = 50;
+  *(&c + 1) = 50;
   cout << "6. A, B, C: " << a << "\t" << b << "\t" << c << endl;
 
-  *((int*)&x - 2) = 60;
+  *((int*)&x + 2) = 60;
   cout << "7. A, B, C: " << a << "\t" << b << "\t" << c << endl;
 
-  *(int*)(&x - 1) = 70;
+  *(int*)(&x + 1) = 70;
   cout << "8. A, B, C: " << a << "\t" << b << "\t" << c << endl;
 
-  *((int*)&wsk_int - 2) = 80;
+  *((int*)&wsk_int + 2) = 80;
   cout << "9. A, B, C: " << a << "\t" << b << "\t" << c << endl;
 
-  *(int*)(&wsk_int - 1) = 90;
+  *(int*)(&wsk_int + 1) = 90;
   cout << "10. A, B, C: " << a << "\t" << b << "\t" << c << endl;
 
   SizeofPointer();

@@ -23,9 +23,9 @@ string hextobin(const string &s){
 
 string bintohex(const string &s){
     string out;
-    for(uint i = 0; i < s.size(); i += 4){
+    for(int i = 0; i < s.size(); i += 4){
         int8_t n = 0;
-        for(uint j = i; j < i + 4; ++j){
+        for(int j = i; j < i + 4; ++j){
             n <<= 1;
             if(s[j] == '1')
                 n |= 1;

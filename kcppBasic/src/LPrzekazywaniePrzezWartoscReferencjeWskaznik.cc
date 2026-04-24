@@ -65,6 +65,15 @@ void swapC(int *a, int *b) {
   cout << "W:\tA = " << *a << " B = " << *b << endl;
 }
 
+int *finction() {
+  int zmienna = 5;
+  int *wskaznik;
+  wskaznik = &zmienna;
+
+  return *wskaznik;
+}
+
+
 /**
  * @brief Main function
  *
@@ -100,6 +109,11 @@ int main() {
   cout << "\nPrzed: A = " << A << " B = " << B << endl;
   swapC(&A, &B);
   cout << "Po:\tA = " << A << " B = " << B << endl;
+  cout << "--------------------------------" << endl;
+
+
+  
+  cout << finction() << endl;
   cout << "--------------------------------" << endl;
 
   return 0;
