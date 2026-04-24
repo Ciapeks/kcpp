@@ -5,35 +5,52 @@
  * v0.02
  */
 
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
-#include <limits> // Potrzebne dla std::numeric_limits
 
 using namespace std;
 
 int main() {
-    ofstream f("log.txt", ios::app); // Otwieramy w trybie dopisywania (ios::app)
 
-    if (!f.is_open()) {
-        cerr << "Nie można otworzyć pliku log.txt!" << endl;
-        return 1; // Zwracamy kod błędu
+  // ----- Przykład zapisu do pliku ------------------
+  ofstream f("log.txt", ios::app); // Otwieramy w trybie dopisywania (ios::app)
+
+  if (!f.is_open()) {
+    cerr << "Nie można otworzyć pliku log.txt!" << endl;
+    return 1; // Zwracamy kod błędu
+  }
+
+  string fullName;
+
+  cout << "Wpisz swoje pełne imię i nazwisko (naciśnij Enter): \n";
+  getline(cin >> ws, fullName); // Używamy getline do wczytania całej linii, >>
+                                // ws usuwa białe znaki z początku
+
+  cout << "Twoje imię to: " << fullName << endl;
+
+  f << fullName << endl; // Dodajemy znak nowej linii po zapisie
+  if (f.fail()) {
+    cerr << "Błąd podczas zapisu do pliku log.txt!" << endl;
+  } else {
+    cout << "Twoje imię zostało zapisane do pliku log.txt" << endl;
+  }
+
+  f.close();
+
+  // ----- Przykład czytania z pliku ------------------
+  ifstream plik("log.txt");
+  string linia;
+
+  if (plik.is_open()) {
+    while (getline(plik, linia)) { // Czytaj dopóki są linie
+      cout << "Twoje imię zostało odczytane z pliku log.txt" << endl;
+      cout << linia << endl;
     }
+    plik.close();
+  } else {
+    cerr << "Nie udało się otworzyć pliku!";
+  }
 
-    string fullName;
-
-    cout << "Wpisz swoje pełne imię i nazwisko (naciśnij Enter): \n";
-    getline(cin >> ws, fullName); // Używamy getline do wczytania całej linii, >> ws usuwa białe znaki z początku
-
-    cout << "Twoje imię to: " << fullName << endl;
-
-    f << fullName << endl; // Dodajemy znak nowej linii po zapisie
-    if (f.fail()) {
-        cerr << "Błąd podczas zapisu do pliku log.txt!" << endl;
-    } else {
-        cout << "Twoje imię zostało zapisane do pliku log.txt" << endl;
-    }
-
-    f.close();
-    return 0;
+  return 0;
 }

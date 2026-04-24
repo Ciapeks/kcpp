@@ -18,9 +18,9 @@ void printBinaryShort(const unsigned char val) {
       cout << "0";
 }
 
-#define PRS(STR, EXPR)    \
-  cout << STR << "\t";    \
-  printBinaryShort(EXPR); \
+#define PRS(STR, EXPR)                                                         \
+  cout << STR << "\t";                                                         \
+  printBinaryShort(EXPR);                                                      \
   cout << endl;
 
 int main() {
@@ -36,9 +36,9 @@ int main() {
   cout << "Dlaczego zatem wypisuje nam tylko 1111 0010?\n" << endl;
   cout << "Szukamy, jesli nie wiemy... Dzien dobry wujku Google\n" << endl;
 
-  unsigned int val;
+  /* unsigned int val;
   cout << sizeof(val) << endl;
-  cout << sizeof val  << endl;
+  cout << sizeof val << endl; */
 
   return 0;
 }
