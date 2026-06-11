@@ -89,13 +89,13 @@ void pokazLaczoneFormatowanie3() {
             << std::setw(10) << 2105 << '\n';
 }
 
-// C++20 lub nowszy
-/* void pokazLaczoneFormatowanieC20
-  // {:<10} oznacza: "zarezerwuj 10 znaków i wyrównaj do lewej"
-  std::cout << std::format("{:<10} {}\n", "Id", "Nazwa");
-  std::cout << std::format("{:<10} {}\n", 1, "Klawiatura");
-  std::cout << std::format("{:<10} {}\n", 100, "Myszka");
-} */
+//C++20 lub nowszy
+// void pokazLaczoneFormatowanieC20(){
+//   // {:<10} oznacza: "zarezerwuj 10 znaków i wyrównaj do lewej"
+//   std::cout << std::format("{:<10} {}\n", "Id", "Nazwa");
+//   std::cout << std::format("{:<10} {}\n", 1, "Klawiatura");
+//   std::cout << std::format("{:<10} {}\n", 100, "Myszka");
+// } 
 
 int main() {
   cout << "DEMONSTRACJA MANIPULATORÓW STRUMIENIOWYCH\n";
